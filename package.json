@@ -1,0 +1,18 @@
+{
+  "name": "cypress-8pm",
+  "version": "1.0.0",
+  "description": "this is cypress 8.30pm batch",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [
+    "testing",
+    "javascript"
+  ],
+  "author": "Ankit",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.14.0"
+  }
+}

@@ -1,0 +1,12 @@
+1) Tagname ===> h1
+2) class name ==> .userDetails
+3)id ==> #firstName
+4)genral formula==>h1[id="firstName"]
+html tagname[attribute="value"]
+
+
+Priority
+id
+gerneral formula
+class
+tagname
