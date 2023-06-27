@@ -14,7 +14,7 @@ describe('Traversal Day3', () => {
         //hardCoded or fixed wait
         //implicit wait
         cy.wait(5000)
-        //Explicit wait
+        //Explicit wait cy.intercept()
         cy.get('._331-kn',{timeout:10000}).nextAll().should('have.length',3)
     })
 });
