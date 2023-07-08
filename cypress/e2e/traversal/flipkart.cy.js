@@ -1,5 +1,8 @@
 ///<reference types='cypress'/>
 describe('flipkart',()=>{
+    Cypress.on('uncaught:exception',(err,runnable)=>{
+        return false
+    })
     it('flipkart test example',()=>{
         cy.visit('https://www.flipkart.com/')
         cy.get('._3704LK').type('I phone {enter}')
