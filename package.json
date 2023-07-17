@@ -4,7 +4,7 @@
   "description": "this is cypress 8.30pm batch",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "runTest": "cypress open --e2e --browser chrome"
   },
   "keywords": [
     "testing",

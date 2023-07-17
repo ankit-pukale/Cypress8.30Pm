@@ -18,3 +18,5 @@ describe('Traversal Day3', () => {
         cy.get('._331-kn',{timeout:10000}).nextAll().should('have.length',3)
     })
 });
+
+//dry
