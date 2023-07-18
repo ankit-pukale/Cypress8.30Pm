@@ -23,3 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('contactUsfillData',(firstName,Lastname,email,mobileNum,webSite,companyName,msg)=>{
+    cy.get('#input_1_1').type(firstName)
+    cy.get('#input_1_2').type(Lastname)
+    cy.get('#input_1_3').type(email)
+    cy.get('#input_1_4').type(mobileNum)
+    cy.get('input[placeholder="Website"]').type(webSite)
+    cy.get('input[placeholder="Company"]').type(companyName)
+    cy.get('textarea[placeholder="What can we do for you?"]').type(msg)
+})
+
+//This is for Dynamic Xpath
+Cypress.Commands.add('dynamicXpath',(text)=>{
+    cy.xpath("//span[text()='$var']".replace('$var',text)).click()
+})
