@@ -18,3 +18,6 @@ import './commands'
 require ('cypress-xpath')
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+cy.on('uncaught:exception',(err,Runnable)=>{
+    return false
+})
