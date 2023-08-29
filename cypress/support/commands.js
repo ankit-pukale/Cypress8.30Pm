@@ -38,3 +38,7 @@ Cypress.Commands.add('contactUsfillData',(firstName,Lastname,email,mobileNum,web
 Cypress.Commands.add('dynamicXpath',(text)=>{
     cy.xpath("//span[text()='$var']".replace('$var',text)).click()
 })
+
+Cypress.Commands.add('resolveIframe',(IframeEl)=>{
+    return cy.get(IframeEl).its('0.contentDocument.body').should('not.be.empty').then(cy.wrap)
+})
