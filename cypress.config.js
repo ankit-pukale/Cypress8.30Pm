@@ -6,6 +6,7 @@ module.exports = defineConfig({
   e2e: {
     chromeWebSecurity:false,
     video:false,
+    includeShadowDom:true,
     setupNodeEvents(on, config) {
       // implement node event listeners here
       on('task',{
