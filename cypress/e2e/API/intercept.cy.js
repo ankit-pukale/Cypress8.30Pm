@@ -44,11 +44,11 @@ describe('', () => {
         cy.get('[type="password"]').type('admin123')
         cy.get('[type="submit"]').click()
         cy.wait('@getActionList').then(({response})=>{
-            // cy.log(response.body.data[0].group)
-            // cy.log(response.body.data[0].pendingActionCount)
-            // cy.get(`[class="orangehrm-todo-list-item"]`).each((el,index)=>{
-            //     expect(el.text()).to.includes(response.body.data[index].pendingActionCount)
-            // })
+            cy.log(response.body.data[0].group)
+            cy.log(response.body.data[0].pendingActionCount)
+            cy.get(`[class="orangehrm-todo-list-item"]`).each((el,index)=>{
+                expect(el.text()).to.includes(response.body.data[index].pendingActionCount)
+            })
         })
     })
 });
