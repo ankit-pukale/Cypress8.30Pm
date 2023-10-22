@@ -21,6 +21,14 @@ function queryTestDb(query, config) {
   });
 }
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'custom-title',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+  },
   env:{
   "db": {
     "host": "127.0.0.1",
@@ -32,6 +40,7 @@ module.exports = defineConfig({
     video:false,
     includeShadowDom:true,
     setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
       // implement node event listeners here
       on('task',{
         log(message){

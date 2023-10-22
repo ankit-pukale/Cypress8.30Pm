@@ -10,3 +10,8 @@ reporting
 scroll
 calendar
 dbconnection
+
+******************************************************************************************
+mochawesome
+https://www.npmjs.com/package/cypress-mochawesome-reporter
+******************************************************************************************
